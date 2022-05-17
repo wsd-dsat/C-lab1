@@ -1,22 +1,49 @@
 ﻿using System;
+using System.Collections;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace lab{
-    class Program{
+namespace lab4
+{
+    class Program
+    {
+       
         static void Main(string[] args){
 
-            //lab1
-            int a = 3680;
+        
+           // lab2.1
+            char repeat = 'y';
+            do
+            {
+            int a;
+            Console.Write("введіть число -  ");
+            a = Convert.ToInt32(Console.ReadLine());
 
-            int h = a /3600;
-            int x = a /3600;
-            int m = a - h*3600;
-            int s = m%60;
-            Console.WriteLine($"З початку доби пройшло {h} годин {x} хвилин {s} секунд");
+            switch (a){
+                case 1:
+                Console.Write("Понеділок\n");
+                break;
+                case 2:
+                Console.Write("Вівторок\n");
+                break;
+                case 3:
+                Console.Write("Середа\n");
+                break;
+                case 4:
+                Console.Write("Четвер\n");
+                break;
+                case 5:
+                Console.Write("П'ятниця\n");
+                break;
+                case 6:
+                Console.Write("Субота\n");
+                break;
+                case 7:
+                Console.Write("Неділя\n");
+                break;
+                default:
+                Console.Write(");\n");
+                break;
+            }
+            }while ((repeat == 'y') || (repeat == 'Y'));
 
 
 
@@ -24,5 +51,6 @@ namespace lab{
         }
     }
 }
+
 
 
